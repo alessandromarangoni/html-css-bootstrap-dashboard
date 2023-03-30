@@ -9,11 +9,28 @@
     height: 100vh;
 }
 
+@media screen and (max-width:780px){
+    #offcanvasRight{
+        width: 100%;
+    }
+}
 
+#my_section1_col2 .badge{
+    filter:grayscale(.3);
+}
 
+#my_section1_show-more:active + #my_more{
+    display: block !important;
+}
 
-
-
+.fa-code{
+    border-radius: 50%;
+    background-color: rgb(255, 81, 38);
+    padding: .4rem .3rem;
+}
+/* table .btn{
+    padding:.3em .3em !important;
+} */
 
 
 

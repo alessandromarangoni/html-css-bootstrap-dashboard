@@ -16,20 +16,24 @@
     <script src="./js/chart.js"></script>
 </head>
 <body>
-    <header class="">
+    <!-- HEADER -->
+    <header>
+        <!-- NAVBAR -->
         <nav class="navbar fixed-top navbar-expand-lg bg-white">
             <div class="container-fluid">
+                <!-- LOGO -->
                 <a class="navbar-brand" href="#">
                     <img src="./img/logo.svg" alt="" class="d-none d-md-block">
                     <img src="./img/mobile-logo.png" alt="" class="d-md-none d-block" width="50px">
                 </a>
-
+                <!-- SEARCHBAR -->
                 <div class="d-flex flex-grow-1">
                         <form action="" class="d-flex py-3 collapse navbar-collapse">
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass" style="color: #8c8c8c;"></i></span>
                                 <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Prova a cercare lezioni di Laravel">
                                 <datalist id="datalistOptions">
+                                    <!-- SUGGERIMENTI RICERCA -->
                                     <option value="Laravel">
                                     <option value="Bootstrap">
                                     <option value="Float">
@@ -39,7 +43,9 @@
                             </div>
                         </form>
                 </div>
+                <!-- ICONE LATERALI -->
                 <div class="flex-grow-0 d-flex" id="navbarSupportedContent">
+                    <!-- A SCOMPARSA -->
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
@@ -53,11 +59,13 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- FISSA -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle px-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-bell ms" style="color: #e0bb00;"></i>
                         </a>
+                        <!-- DROPDOWN S -->
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#my_F.A.Q."><i class="fa-solid fa-circle-info ps-2" style="color: #5a5a5a;"></i></a></li>
                             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-ellipsis-vertical" style="color: #5a5a62;"></i></a></li>
@@ -69,7 +77,9 @@
             </div>
         </nav>
     </header>
+    <!-- CORPO PAGINA -->
     <div class="d-flex">
+        <!-- SIDEBAR -->
         <div class="fw-bold my_sidebar d-flex flex-column justify-content-between pt-4 pt-sm-2 align-items-center text-white">
             <div class="pt-4 pt-sm-2">
                 <div class="py-2 px-2 my-1 my_nav_button">
@@ -84,92 +94,85 @@
                     <i class="fa-solid fa-signal" style="color: #ffffff;"></i><span class="ps-2 font-weight-bold d-none d-md-inline">Signals</span>
                 </div>
             </div>
-            
+    
             <div class="py-2 px-2 my-1 my_nav_button">
                 <i class="fa-solid fa-gear" style="color: #ffffff;"></i><span class="ps-2 font-weight-bold d-none d-md-inline">Admin</span>
             </div>
-
-
         </div>
-
+<!-- MAIN -->
         <main class="debug-h-full debug-w-full overflow-auto pt-5">
             <section class="bg-primary pt-5">
                 <div class="container-fluid ">
                     <div class="row gy-3">
                         <div class="col-8 col-md-2 d-flex align-items-center text-bg-primary pt-3 pt-md-0 order-md-last justify-content-md-end align-self-md-start">
                             <span class="px-2">Nuovo studente</span>
-
-                            
+                            <!-- off canvas TOGGLER--> 
                             <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
                             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                            <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <!-- off canvas -->
-                            <div class="offcanvas-body text-black">
-
-                                <form class="row g-3">
-
-                                    <div class="col-md-6">
-                                        <label for="name" class="form-label">Nome</label>
-                                        <input type="text" class="form-control" aria-label="First name">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputsurname" class="form-label">Cognome</label>
-                                        <input type="text" class="form-control" aria-label="Last name">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label for="inputEmail4" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="inputEmail4">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputPassword4" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="inputPassword4">
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="inputAddress" class="form-label">Indirizzo</label>
-                                        <input type="text" class="form-control" id="inputAddress">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputCity" class="form-label">Città</label>
-                                        <input type="text" class="form-control" id="inputCity">
-                                    </div>
-                                    <div class="col-md-4">
-                                        <label for="inputState" class="form-label">Stato</label>
-                                        <select id="inputState" class="form-select">
-                                            <option selected>Choose..</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <label for="inputZip" class="form-label">CAP</label>
-                                        <input type="text" class="form-control" id="inputZip">
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="File" class="form-label">Foto</label>
-                                        <div class=" col-12 input-group">
-                                            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                            <!-- off canvas BODY-->
+                                <div class="offcanvas-body text-black">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="name" class="form-label">Nome</label>
+                                            <input type="text" class="form-control" aria-label="First name">
                                         </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                                            <label class="form-check-label" for="gridCheck">
-                                            Check me out
-                                            </label>
+                                        <div class="col-md-6">
+                                            <label for="inputsurname" class="form-label">Cognome</label>
+                                            <input type="text" class="form-control" aria-label="Last name">
                                         </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-success mx-2">Sign in</button>
-                                        <button type="delete" class="btn btn-warning mx-2">Delete</button>
-                                    </div>
-                                </form>
-                                <!-- fine off canvas -->
+                                        <div class="col-md-6">
+                                            <label for="inputEmail4" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="inputEmail4">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword4" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="inputAddress" class="form-label">Indirizzo</label>
+                                            <input type="text" class="form-control" id="inputAddress">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputCity" class="form-label">Città</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputState" class="form-label">Stato</label>
+                                            <select id="inputState" class="form-select">
+                                                <option selected>Choose..</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="inputZip" class="form-label">CAP</label>
+                                            <input type="text" class="form-control" id="inputZip">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="File" class="form-label">Foto</label>
+                                            <div class=" col-12 input-group">
+                                                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                Check me out
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-success mx-2">Sign in</button>
+                                            <button type="delete" class="btn btn-warning mx-2">Delete</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            </div>
-
+                            <!-- fine off canvas -->
                         </div>
                         <div class="col-8 col-md-6 text-white order-md-first" id="my_section1_col2">
                             <div class="d-flex align-items-center">
@@ -187,7 +190,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-8 col-md-4 text-white justify-content-md-end">
                             <p><strong>Studenti online negli ultimi 30 minuti</strong></p>
                             <h2>125</h2>
@@ -196,11 +198,10 @@
                 </div>
             </section>
             <div class="container-fluid">
-                
                 <div class="row">
-
                     <div class="col-md-8 col-12 gy-2">
                         <div>
+                            <!-- CARD-1 -->
                             <div class="card my-5">
                                 <div class="card-header">
                                     <h3 class="pt-2">Prossime classi</h3>
@@ -224,7 +225,6 @@
                                                 <td><span class="badge bg-success">Done</span></td>
                                                 <td><button type="button" class="btn btn-outline-secondary mx-1"><i class="fa-solid fa-pen fa-xs" style="color: #9e9e9e;"></i></button> <button type="button" class="btn btn-outline-secondary mx-1"><i class="fa-solid fa-trash fa-xs" style="color: #9f9f9f;"></i></button></td>
                                             </tr>
-
                                             <tr class="align-text-bottom">
                                                 <td><i class="fa-solid fa-code mx-1" style="color: #ffffff;"></i>Classe 92</td>
                                                 <td class="d-none d-sm-table-cell">15 FEB 2021</td>
@@ -280,6 +280,7 @@
                             </div>    
                         </div>
                         <div>
+                            <!-- CARD-2 -->
                             <div class="card my-2" id="my_F.A.Q.">
                                 <div class="card-header">
                                     <h3 class="ptsm">F.A.Q</h3>
@@ -323,6 +324,7 @@
                     </div>
                     <div class="col-12 col-md-4 my-2">
                         <div>
+                            <!-- CARD-3 -->
                             <div class="card my-5" id="my_todo">
                                 <div class="card-header">
                                     <h3 class="pt-2">Todo</h3 class="pt-2">
@@ -337,6 +339,7 @@
                             </div>    
                         </div>
                         <div>
+                            <!-- CARD-4 -->
                             <div class="card my-2">
                                 <div class="card-body">
                                     <ul class="list-group list-group-flush">
@@ -360,6 +363,7 @@
             </div>
         </main>
     </div>
+    <!-- GRAFICO CARD-4 -->
     <script>
         const ctx = document.getElementById('my_Chart');
 

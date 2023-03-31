@@ -29,7 +29,6 @@ body{
 .my_nav_button:hover{
     background-color: #f8f9fa47;
 }
-
 main{
     height: calc(100vh - 100px);
     width: calc(100% - 150px);

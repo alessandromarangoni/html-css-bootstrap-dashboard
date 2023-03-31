@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
 }
+
 #exampleDataList{
     background-color: rgba(128, 128, 128, 0.2);
 }
@@ -27,12 +28,22 @@
 }
 
 main{
+    height: calc(100vh - 100px);
     width: calc(100% - 150px);
     background-color: #f8f9fa;
 }
 @media screen and (max-width:780px){
     #offcanvasRight{
         width: 100%;
+    }
+}
+@media screen and (min-width:1140px) {
+    #my_col_tab{
+        width: 40%;
+    }
+    .dropdown-menu{
+        text-align: center;
+        transform: translateX(-110px);
     }
 }
 
@@ -49,9 +60,7 @@ main{
     background-color: rgb(255, 81, 38);
     padding: .4rem .3rem;
 }
-/* table .btn{
-    padding:.3em .3em !important;
-} */
+
 
 
 
